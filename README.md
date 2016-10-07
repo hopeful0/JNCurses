@@ -7,15 +7,15 @@ A simple Java library(only one class now) which uses jni to call the functions  
 
 1.be sure your Java environment is well
 
-use`$java --version`to ensure you have right environment, so the Makefile can work normally.
+use`$ java --version`to ensure you have right environment, so the Makefile can work normally.
 
-If you don't have `$(JAVA_HOME)`, the `make` will fail also, please change the Maekfile in directory lib/
+If you don't have `$(JAVA_HOME)`, the `$ make` will fail also, please change the Maekfile in directory lib/
 
 2.generate the library file
 
 ```
-$cd lib/
-$make
+$ cd lib/
+$ make
 ```
 
 Then the libjncurses.so will be appeared in the directory lib/.
@@ -24,18 +24,18 @@ Then the libjncurses.so will be appeared in the directory lib/.
 
 you can copy the file to /usr/lib/
 
-`$sudo cp ./libjncurses.so /usr/lib/`
+`$ sudo cp ./libjncurses.so /usr/lib/`
 
 you can also make the directory lib/ one part of "java.library.path"
 
-`$export LD_LIBRARY_PATH=$(JNCurses'dir)/lib`
+`$ export LD_LIBRARY_PATH=$(JNCurses'dir)/lib`
 
 the first method will useful allways, and the second method will only useful in the terminal you use.
 
 
 4.complie and run the test program
 
-return the directory JNCurses/ and use `$make` or `$make test` to complie and run the test program. 
+return the directory JNCurses/ and use `$ make` or `$ make test` to complie and run the test program. 
 
 ---
 
