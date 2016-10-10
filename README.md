@@ -3,6 +3,34 @@ A simple Java library(only one class now) which uses jni to call the functions  
 
 ---
 
+# Version Info
+
+- ver 0.1.0
+
+  data:2016.10.07
+
+  update info:simplely achieve the frequently-used interface in 'ncurses.h' by jni.
+
+- ver 0.1.1
+
+  date:2016.10.10
+
+  update info:replace 'ncurses' to 'ncursesw' for Chinese support.
+
+---
+
+# Dependency
+
+1.libncursesw5
+
+`$ sudo apt install libncursesw5`
+
+2.JDK
+
+please ensure your jdk environment is right, or see the method from Google
+
+---
+
 # Test Program
 
 1.be sure your Java environment is well

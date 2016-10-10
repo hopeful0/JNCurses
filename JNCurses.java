@@ -4,8 +4,8 @@
  * Most native functions use the native name and have same param and return.But some types that can not be translate by JNI will be different.<br>
  * This class will use "stdscr" only. So some functions with param "win" will be not translate, and some will ignore the param "win".
  * @author hopeful
- * @version 0.1.0
- * @date 2016.10.07
+ * @version 0.1.1
+ * @date 2016.10.10
  */
 public class JNCurses {
 
@@ -32,6 +32,8 @@ public class JNCurses {
 	public native int echochar(byte ch);
 
 	public native int addstr(String str);
+	
+	//public native int addstr(byte[] bytes);
 
 	public native int addnstr(String str,int n);
 

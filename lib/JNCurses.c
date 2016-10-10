@@ -1,5 +1,6 @@
 #include "JNCurses.h"
-#include <ncurses.h>
+#include <ncursesw/curses.h>
+#include <locale.h>
 
 /*
  * Class:     JNCurses
@@ -7,6 +8,7 @@
  * Signature: ()V
  */
 JNIEXPORT void JNICALL Java_JNCurses_initscr (JNIEnv *env, jobject obj) {
+	setlocale(LC_ALL, "");
 	initscr();
 }
 
@@ -111,6 +113,18 @@ JNIEXPORT jint JNICALL Java_JNCurses_addstr (JNIEnv *env, jobject obj, jstring s
 	(*env)->ReleaseStringUTFChars(env,str,c_str);
 	return (jint) res;
 }
+
+/*
+ * Class:     JNCurses
+ * Method:    addstr
+ * Signature: ([B)I
+ *
+JNIEXPORT jint JNICALL Java_JNCurses_addstr___3B (JNIEnv *env, jobject obj, jbyteArray bytes) {
+	jbyte *jbytes = (*env)->GetByteArrayElements(env,bytes,0);
+	int res = addstr((const char*)jbytes);
+	(*env)->ReleaseByteArrayElements(env,bytes,jbytes,0);
+	return (jint) res;
+}*/
 
 /*
  * Class:     JNCurses
